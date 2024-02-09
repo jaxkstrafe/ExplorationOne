@@ -1,33 +1,30 @@
-/*
- * 
- * Group Members: Jack Dalton, Juan Robledo, Ben Stewart
- * Assignment: Exploration One
- * Instructor: Becnel
- * Course: 3342 - 001
- * Date: 2/8/2024
- * 
- * Objective: Create two algorithms using the recursive 
- * and iterative methods to be compared using the 
- * file Test.java
- * 
- * Equation to compare:
- * f(0) = 0
- * f(1) = 2
- * f(2) = 4
- * F(n) = F(n - 1) + nF(n - 2) - 2F(n - 3) + 5
- */
+import java.time.Duration;
+import java.time.Instant;
 
-public class Compare {
-    public static void main(String[] arg){
-        //code here
-    }// end main
+public class Test {
+    
+    public static void main(String[] args) {
+        Instant start = Instant.now();
+        System.out.println(Compare.iterativeF(0));
+        System.out.println(Compare.iterativeF(1));
+        System.out.println(Compare.iterativeF(2));
+        System.out.println(Compare.iterativeF(3));
+        System.out.println(Compare.iterativeF(4));
+        System.out.println(Compare.iterativeF(5));
+        Instant End = Instant.now();
+        Duration timeElapsed = Duration.between(start, End);
+        System.out.println("time elapsed: " + timeElapsed);
 
+        start = Instant.now();
+        System.out.println(Compare.recursiveF(0));
+        System.out.println(Compare.recursiveF(1));
+        System.out.println(Compare.recursiveF(2));
+        System.out.println(Compare.recursiveF(3));
+        System.out.println(Compare.recursiveF(4));
+        System.out.println(Compare.recursiveF(5));
+        End = Instant.now();
+        timeElapsed = Duration.between(start, End);
+        System.out.println("time elapsed: " + timeElapsed);
 
-    public static int recursiveF(){
-        // code here
-    }// end recF
-
-    public static int iterativeF(){
-        // code here
-    }//end iterF
+    }
 }
