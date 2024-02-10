@@ -17,7 +17,7 @@
  * F(n) = F(n - 1) + nF(n - 2) - 2F(n - 3) + 5
  */
 
-public class Compare {
+ public class Compare {
 
     public static int recursiveF(int n) {
         if (n == 0) {
